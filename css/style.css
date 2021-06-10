@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;600;700&display=swap');
+
+:root {
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+.welcome {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+header {
+  background-color: #216339;
+  padding: 1.3em 0em;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  height: 110px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  color: whitesmoke;
+  /* justify-content: space-around; */
+  font-size: 1.5em;
+  align-items: center;
+}
+
+li {
+  padding-right: 60px;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.nav-img {
+  justify-content: flex-start;
+  flex-grow: 3;
+  padding-left: 30px;
+}
+
+#home {
+  background: url('../img/bg.jpg') no-repeat center 115px fixed;
+}
+
+#gardens {
+    background: url('../img/img-works.jpg') no-repeat center 115px fixed;
+}
+
+#bio {
+  background: url('../img/img1.jpg') no-repeat center 115px fixed;
+}
+
+#contact {
+  background: url('../img/img2.jpg') no-repeat center 115px fixed;
+}
+
+#home, #gardens, #bio, #contact {
+  min-height: 100vh;
+  background-size: cover;
+  background-color: aquamarine;
+}
+
+footer {
+  padding: 20px;
+  height: 70px;
+  background-color: #216339;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.container-main, .container-gardens, .container-bio, .container-contact {
+  position: sticky;
+  top: 300px;
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  color: white;
+  border-radius: 25px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.container-main {
+  top: 25%;
+  width: 50%;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(49, 80, 51, 0.6);
+  backdrop-filter: blur(0px);
+  text-align: center;
+}
+
+.container-gardens {
+    backdrop-filter: blur(8px);
+    margin-right: auto;
+    width: 70%;
+    height: 82vh;
+}
+
+.container-contact {
+  margin-left: 0px;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.bee-right {
+    position: absolute;
+    right: 300px;
+    top: 60%;
+    animation: right-bee 20s infinite;
+    animation-timing-function: linear;
+  }
+
+  input {
+    background-color: rgb(204, 245, 206);
+  }
+
+  textarea {
+    resize: none;
+  }
+
+@keyframes right-bee {
+    from {right: 0%;}
+    to {right: 75%;}
+  }
+
+
+.bee-left {
+    position: absolute;
+    left: 300px;
+    top: 45%;
+    animation: left-bee 20s infinite;
+    animation-timing-function: linear;
+  }
+
+  .btn {
+    background-color: #23da66;
+    width: 80px;
+    border-radius: 15px;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+@keyframes left-bee {
+    from {left: 0%;}
+    to {left: 75%;}
+  }
+
+  .zoom {
+    transition: transform .2s;
+  }
+
+  .zoom:hover {
+    cursor: pointer;
+  }
+
+  .zoom:active {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+  textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;	
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 768px) {
+      ul {
+          flex-direction: column;
+      }
+      header {
+          height: inherit;
+          font-size: 0.7em;
+      }
+      .welcome {
+        font-size: 1.5em;
+      }
+      .container-main, .container-gardens, .container-bio, .container-contact {
+        width: 90%;
+        height: inherit;
+      }
+      
+      .bee-left {
+        top: 65%;
+      }
+
+      .bee-right {
+        top: 45%;
+      }
+      
+      .bee-right, .bee-left {
+        width: 80px;
+      }
+    }
